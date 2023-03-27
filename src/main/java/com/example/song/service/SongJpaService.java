@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import java.util.*;
 import com.example.song.repository.SongJpaRepository;
-import com.example.song.model.*;
+import com.example.song.model.Song;
 import com.example.song.repository.*;
 
 @Service
@@ -47,18 +47,18 @@ public class SongJpaService implements SongRepository{
          try{
                 Song newsong=songJpaRepository.findById(songId).get();
 
-                if(song.getsongName()!=null){
-                    newsong.setsongName(song.getsongName());
+                if(song.getSongName()!=null){
+                    newsong.setSongName(song.getSongName());
                 }
 
-                if(song.getlyricist()!=null){
-                    newsong.setlyricist(song.getlyricist());
+                if(song.getLyricist()!=null){
+                    newsong.setLyricist(song.getLyricist());
                 }
-                if(song.getsinger()!=null){
-                    newsong.setsinger(song.getsinger());
+                if(song.getSinger()!=null){
+                    newsong.setSinger(song.getSinger());
                 }
-                if(song.getmusicDirector()!=null){
-                    newsong.setmusicDirector(song.getmusicDirector());
+                if(song.getMusicDirector()!=null){
+                    newsong.setMusicDirector(song.getMusicDirector());
                 }
 
                 songJpaRepository.save(newsong);
@@ -78,7 +78,7 @@ public class SongJpaService implements SongRepository{
             songJpaRepository.deleteById(songId);
         }
         catch(Exception e){
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT);
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
 

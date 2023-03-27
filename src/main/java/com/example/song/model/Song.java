@@ -36,39 +36,39 @@ public class Song{
         this.musicDirector=musicDirector;
     }
 
-    public void setsongId(int songId){
+    public void setSongId(int songId){
         this.songId=songId;
 
     }
-    public int getsongId(){
+    public int getSongId(){
         return songId;
     }
 
-    public void setsongName(String songName){
+    public void setSongName(String songName){
         this.songName=songName;
     }
-    public String getsongName(){
+    public String getSongName(){
         return songName;
     }
 
-    public void setlyricist(String lyricist){
+    public void setLyricist(String lyricist){
         this.lyricist=lyricist;
     }
-    public String getlyricist(){
+    public String getLyricist(){
         return lyricist;
     }
 
-    public void setsinger(String singer){
+    public void setSinger(String singer){
         this.singer=singer;
     }
-    public String getsinger(){
+    public String getSinger(){
         return singer;
     }
 
-    public void setmusicDirector(String musicDirector){
+    public void setMusicDirector(String musicDirector){
         this.musicDirector=musicDirector;
     }
-    public String getmusicDirector(){
+    public String getMusicDirector(){
         return musicDirector;
     }
 
